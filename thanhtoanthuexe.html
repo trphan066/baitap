@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gui Loi Nhan</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .khungchinh {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+      }
+      .anhminhhoa {
+        width: 100px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      .tieude {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+      .vidu {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+      .nhaplieu {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+      .nhaplieu:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+      .nutgui {
+        background-color: #269191;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .nutgui:hover {
+        background-color: #269191;
+      }
+      .thongbao {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #269191;
+        display: none;
+      }
+      .loi {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #dc3545;
+        display: none;
+      }
+      @media (max-width: 600px) {
+        .khungchinh {
+          padding: 20px;
+          margin: 10px;
+        }
+        .tieude {
+          font-size: 18px;
+        }
+        .vidu {
+          font-size: 12px;
+        }
+      }
+      #anhtb {
+        color: red;
+        font-size: smaller;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="khungchinh">
+      <h1 style="color: #269191">Thanh toán Online</h1>
+      <img class="anhminhhoa" src="./image.png" alt="Anh minh hoa" />
+      <h3 class="tieude">
+        Quý khách vui lòng vào app ngân hàng quét mã QR trên và nhập LỜI NHẮN
+        theo cú pháp:Mã tour + Họ tên + Số điện thoại + Email!!! <br />
+        <p class="vidu">
+          Ví dụ: "N00001 Nguyễn Văn A 0123456789 vanadepzai@gmail.com"
+        </p>
+      </h3>
+      <span>Mã Tour: </span>
+      <span id="matour"></span><br />
+      <span>Đơn Giá: </span>
+      <span>1.000.000vnd</span>
+      <h4>Sau khi thanh toán vui lòng gửi ảnh bill thanh toán vào phía dưới</h4>
+      <div>
+        <input id="anhthanhtoan" type="file" class="nhaplieu" /><br />
+        <span id="anhtb"></span><br />
+        <p></p>
+      </div>
+      <button onclick="m12()" class="nutgui">Xác Nhận Thanh Toán</button>
+      <a href="./dattour.html"><button class="nutgui">Back</button></a>
+    </div>
+    <script src="./main.js"></script>
+    <script src="./main1.js"></script>
+  </body>
+</html>

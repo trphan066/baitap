@@ -1,0 +1,224 @@
+h1{
+    text-align: center;
+}
+
+.Vinpeal{
+    text-align: center;
+}
+body{
+    background-color: #269191
+    ;
+}
+.khuvuichoi{
+    background-color: darkgray;
+    text-align: center;
+    padding-left: 10px;
+}
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p {
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .app-store-btn {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .app-store-btn img {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-section .fab {
+    margin: 0 5px;
+    font-size: 1.2em;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    font-size: 0.8em;}
+   
+/* Tạo không gian xung quanh nút */
+.booking-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Đặt chiều cao toàn bộ trang để nút hiển thị ở giữa */
+    
+}
+
+/* Định dạng nút */
+.booking-btn {
+    margin-right: 15px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color:#269191
+    ; /* Màu nền đỏ cam */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Để các góc của nút tròn */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Tạo hiệu ứng chuyển động */
+}
+
+/* Khi hover vào nút */
+.booking-btn:hover {
+    transform: translateY(-5px); /* Nút sẽ di chuyển lên một chút */
+    background-color: #269120;
+    ; /* Thay đổi màu nền khi hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ khi hover */
+}
+li{
+    font-size: xx-large;}
+    body {
+      background-color: #f4f4f4;
+      /* line-height: 1.6; */
+    }
+    
+    /* Thanh điều hướng */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+    #tablenavbar td {
+      text-align: center;
+      width: 15vw;
+    }
+    .nav-item {
+      transition: transform 0.3s ease-in-out;
+      font-size: 1.5vw;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-item:hover {
+      transform: scale(1.1);
+      font-size: x-large;
+      color: #269191;
+    }
+    
+    .home-link {
+      transition: font-size 0.3s ease, color 0.3s;
+    }
+    
+    .home-link:hover {
+      font-size: 1.2em;
+     
+    }
+    
+    .nav-item i {
+      margin-right: 5px;
+    }
+    
+    .navbar-right {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-signup,
+    .btn-login {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .btn-signup {
+      background-color: #ccc;
+      color: #333;
+    }
+    
+    .btn-signup:hover {
+      background-color: #bbb;
+    }
+    
+    .btn-login {
+      background-color: #269191;
+      color: #fff;
+    }
+    
+    .btn-login:hover {
+      background-color: #269191;
+    }
+    a {
+      transition: transform 0.3s ease-in-out;
+    }
+    .Mup{
+      padding: 40px;
+    }
+    
+     
+      
+      
+      
+  
+    #app {
+      height: 15vw;
+      width: 22vw;
+      
+      
+    }
+    
+    
+    

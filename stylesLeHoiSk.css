@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    line-height: 1.6;
+  }
+  
+  /* Thanh điều hướng */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  #tablenavbar td {
+    text-align: center;
+    width: 15vw;
+  }
+  .nav-item {
+    transition: transform 0.3s ease-in-out;
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-item:hover {
+    transform: scale(1.1);
+    font-size: x-large;
+    color: #007bff;
+  }
+  
+  .home-link {
+    transition: font-size 0.3s ease, color 0.3s;
+  }
+  .home-link:hover {
+    font-size: 1.2em;
+    color: #0056b3;
+  }
+  
+  .nav-item i {
+    margin-right: 5px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-signup {
+    background-color: #ccc;
+    color: #333;
+  }
+  .btn-signup
+.btn-login {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+  
+  .btn-signup:hover {
+    background-color: #bbb;
+  }
+  
+  .btn-login {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-login:hover {
+        background-color: #0056b3;}
+/* nội dung chính*/
+  .bo {
+    margin-top: 100px; 
+  }
+  .bo .h1 {
+    text-align: justify; /* Căn đều hai bên */
+    margin: 100px; /* Tạo khoảng cách lề trái và phải */
+  }
+  .container .card img {
+    width: auto; /* Ảnh sẽ chiếm toàn bộ chiều rộng của thẻ chứa */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    display: block; /* Loại bỏ khoảng trắng dưới ảnh */
+    object-fit: cover; /* Đảm bảo ảnh che hết vùng chứa */
+    max-width: 100%; /* Giới hạn chiều rộng tối đa của ảnh */
+    max-height: 100%; /* Giới hạn chiều cao tối đa của ảnh */
+    margin: 0 auto 20px; /* Căn giữa ảnh trong thẻ chứa */
+  }
+  .container {
+    text-align: justify; /* Căn đều hai bên */
+    margin: 100px; /* Tạo khoảng cách lề trái và phải */
+    line-height: 1.5; /* Tăng khoảng cách giữa các dòng */
+  
+      text-indent: 30px; /* Lùi vào 30px ở dòng đầu tiên */
+      margin-bottom: 10px; /* Tạo khoảng cách giữa các đoạn văn */
+      line-height: 1.6; /* Tăng khoảng cách giữa các dòng */
+    }
+  
+  .container .card {
+    transition: transform 0.3s; /* Hiệu ứng khi hover */
+    margin-bottom: 20px; /* Khoảng cách giữa các card */
+  }
+  .container .card:hover {
+    transform: scale(1.02); /* Hiệu ứng phóng to nhẹ khi hover */
+  }
+  .container .card p {
+    margin-bottom: 10px; /* Khoảng cách giữa các đoạn văn trong card */
+  }
+  .container .card b {
+    color: #333; /* Màu chữ đậm */
+  }
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p {
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .app-store-btn {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .app-store-btn img {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-section .fab {
+    margin: 0 5px;
+    font-size: 1.2em;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    font-size: 0.8em;
+  }
+  
