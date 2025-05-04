@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="khachsan1.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+</head>
+<body>
+  <div class="hero">
+    <div id="overlay">
+        <!-- Thanh điều hướng (Navbar) -->
+        <nav class="navbar">
+          <div class="navbar-left">
+            <table id="tablenavbar">
+              <tr>
+                <td>
+                  <a href="./index.html" class="nav-item home-link"
+                    ><i class="fas fa-home"></i> Trang chủ</a
+                  >
+                </td>
+                <td>
+                  <a href="./khachsan.html" class="nav-item">Khách sạn</a>
+                </td>
+                <td><a href="./nhahang.html" class="nav-item">Nhà hàng</a></td>
+                <td><a href="./vevuichoi.html" class="nav-item">Vé vui chơi</a></td>
+                <td><a href="#" class="nav-item">Tour du lịch</a></td>
+
+                <td><a href="#" class="nav-item">Khác</a></td>
+              </tr>
+            </table>
+          </div>
+          <div id="logg" class="navbar-right"  >
+            <button class="btn-signup">Đăng ký</button>
+            <button class="btn-login">Đăng nhập</button>
+          </div>
+        </div>
+          <div class="help">
+            <a href="./lichsukhachsan.html"><button>Lịch sử đặt khách sạn</button></a>
+            <div id="boloc">
+              <h3>Bộ Lọc Khách Sạn</h3>
+              <h4>Giá tiền</h4>
+              <select name="" id="gia">
+                <option value="tatca">Tất cả </option>
+                <option value="tren500">Trên 500.000vnd 1 giờ </option>
+                <option value="duoi500">Dưới 500.000vnd 1 giờ </option>
+              </select>
+              <h4>Đánh giá dịch vụ </h4>
+              <select name="" id="danhgia">
+                <option value="tatca">Tất cả</option>
+                <option value="5">5 sao </option>
+                <option value="4">4 sao</option>
+                <option value="3">3 sao</option>
+                <option value="duoi3">Dưới 3 sao</option>
+              </select>
+              <h4>Tiện nghi </h4>
+              <select name="" id="dongtour">
+                <option value="tatca">Tất cả </option>
+                <option value="caocap">Cao cấp </option>
+                <option value="tieuchuan">Tiêu chuẩn </option>
+                <option value="tietkiem">Tiết kiệm </option>
+              </select>
+              <div>
+                <button onclick="m19()" id="apdung">Áp dụng</button>
+                <button onclick="m20()" id="apdung">Xóa bộ lọc</button>
+              </div>
+            </div>
+          <div class="container">
+            <div id="ks1" class="card">
+                <img src="./dao phu quoc.png" alt="Hotel">
+                <div class="card-content">
+                    <h3>Vinpearl Resort & Spa Nha Trang Bay</h3>
+                    <div class="stars">★★★★☆</div>
+                    <p>Đảo Hòn Tre, Phường Vĩnh Nguyên, TP. Nha Trang</p>
+                    <p class="discount">Giảm giá: 0%</p>
+                    <p class="price">450,000 đ</p>
+                    <a onclick="m18('Vinpearl Resort & Spa Nha Trang Bay','ks1')" class="contact">Đặt phòng</a>
+                    <a onclick="openMap('Đảo Hòn Tre, Phường Vĩnh Nguyên, TP. Nha Trang, Khánh Hòa')" class="contact"> Đặt phòng trực tiếp?</a>
+                </div>
+            </div>
+            <div id="ks2" class="card">
+                <img src="./executive-suite-balcony-view.jpg" alt="Hotel">
+                <div class="card-content">
+                    <h3>Sheraton Nha Trang Hotel & Spa</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>26-28 Trần Phú, TP. Nha Trang, Khánh Hòa</p>
+                    <p class="discount">Giảm giá: 0%</p>
+                    <p class="price">550,000 đ</p>
+                    <a onclick="m18('Sheraton Nha Trang Hotel & Spa','ks2')" class="contact">Đặt phòng</a>
+                    <a onclick="openMap('26-28 Trần Phú, TP. Nha Trang, Khánh Hòa')" class="contact"> Đặt phòng trực tiếp?</a>
+                </div>
+            </div>
+            <div id="ks3" class="card">
+                <img src="./intercontinental-nha-trang-4040412681-2x1.webp" alt="Hotel">
+                <div class="card-content">
+                    <h3>InterContinental Nha Trang</h3>
+                    <div class="stars">★★★☆☆</div>
+                    <p> 32 - 34 Trần Phú, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa</p>
+                    <p class="discount">Giảm giá: 10%</p>
+                    <p class="price">400,000 đ</p>
+                    <a onclick="m18('InterContinental Nha Trang','ks3')" class="contact">Đặt phòng</a>
+                    <a onclick="openMap('32 - 34 Trần Phú, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa')" class="contact"> Đặt phòng trực tiếp?</a>
+                </div>
+            </div>
+            <div id="ks4" class="card">
+                <img src="./vinpearl.png" alt="Hotel">
+                <div class="card-content">
+                    <h3>Vinpearl Resort Nha Trang</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>Đảo Hòn Tre, Nha Trang, Khánh Hòa</p>
+                    <p class="discount">Giảm giá: 0%</p>
+                    <p class="price">550,000 đ</p>
+                    <a onclick="m18('Vinpearl Resort Nha Trang','ks4')" class="contact">Đặt phòng</a>
+                    <a onclick="openMap('Đảo Hòn Tre, Nha Trang, Khánh Hòa')" class="contact"> Đặt phòng trực tiếp?</a>
+                </div>
+            </div>
+        <!-- </div> -->
+      <!-- </div>
+      <div class="hope"> -->
+        <!-- <div class="container"> -->
+          <div id="ks5" class="card">
+              <img src="./1mc5g12000h16w18c93C6_R_960_660_R5_D.webp" alt="Hotel">
+              <div class="card-content">
+                  <h3>Sunrise Nha Trang Beach Hotel & Spa</h3>
+                  <div class="stars">★★★★☆</div>
+                  <p> 12 Trần Phú, TP. Nha Trang, Khánh Hòa
+                    <p class="price">450,000 đ</p>
+                  </p>
+                  <p class="discount">Giảm giá: 5%</p>
+                  <a onclick="m18('Sunrise Nha Trang Beach Hotel & Spa','ks5')" class="contact">Đặt phòng</a>
+                  <a onclick="openMap('12 Trần Phú, TP. Nha Trang, Khánh Hòa')" class="contact"> Đặt phòng trực tiếp?</a>
+              </div>
+          </div>
+          <div id="ks6" class="card">
+              <img src="./charm hills.png" alt="Hotel">
+              <div class="card-content">
+                  <h3>Mường Thanh Grand Nha Trang Hotel</h3>
+                  <div class="stars">★★★★☆</div>
+                  <p>Dương Hiến Quyền, Phường Vĩnh Hải, TP. Nha Trang</p>
+                  <p class="discount">Giảm giá: 5%</p>
+                  <p class="price">450,000 đ</p>
+                  <a onclick="m18('Mường Thanh Grand Nha Trang Hotel','ks6')" class="contact">Đặt phòng</a>
+                  <a onclick="openMap('Dương Hiến Quyền, Phường Vĩnh Hải, TP. Nha Trang')" class="contact"> Đặt phòng trực tiếp?</a>
+              </div>
+          </div>
+          <div id="ks7" class="card">
+              <img src="./laika.jpg" alt="Hotel">
+              <div class="card-content">
+                  <h3>Green World Nha Trang</h3>
+                  <div class="stars">★★★★☆</div>
+                  <p>44 Nguyễn Thị Minh Khai, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa</p>
+                  <p class="discount">Giảm giá: 5%</p>
+                  <p class="price">450,000 đ</p>
+                  <a onclick="m18('Green World Nha Trang','ks7')" class="contact">Đặt phòng</a>
+                  <a onclick="openMap('44 Nguyễn Thị Minh Khai, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa')" class="contact"> Đặt phòng trực tiếp?</a>
+              </div>
+          </div>
+          <div id="ks8" class="card">
+              <img src="./the marron.png" alt="Hotel">
+              <div class="card-content">
+                  <h3>Liberty Central Nha Trang</h3>
+                  <div class="stars">★★★☆☆</div>
+                  <p>9 Biệt Thự, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa</p>
+                  <p class="discount">Giảm giá: 10%</p>
+                  <p class="price">400,000 đ</p>
+                  <a onclick="m18('Liberty Central Nha Trang','ks8')" class="contact">Đặt phòng</a>
+                  <a onclick="openMap('9 Biệt Thự, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa')" class="contact"> Đặt phòng trực tiếp?</a>
+              </div>
+          </div>
+      </div>
+    </div>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>Khám phá Việt Nam</h3>
+            <div class="footer-section">
+              <p><a onclick="m18()">Hợp tác với PKTMtravel</a></p>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Về PKTMtravel</h3>
+            <p>Chính sách</p>
+            <p>Điều khoản</p>
+            <p>Quy chế hoạt động</p>
+            <p>Giải thưởng 63Stravel</p>
+            <p>Đăng ký KD: 00224001987</p>
+            <p>Điện thoại: 0912476286</p>
+            <p>S01-L26 Biệt thự Solasta Mansion Đường Nội,</p>
+            <p>Quận Hà Đông, TP Hà Nội, Việt Nam</p>
+          </div>
+          <div class="footer-section">
+            <h3>Khác</h3>
+            <p>Trang chủ</p>
+            <p>Review du lịch</p>
+            <p>Blog du lịch</p>
+            <p>Bản đồ WC</p>
+            <p>Video</p>
+            <p>Ảnh</p>
+            <p>Cục thi ảnh</p>
+            <p>Điểm du lịch</p>
+          </div>
+          <div class="footer-section">
+            <h3>Về PKTMtravel</h3>
+            <p>
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i> <i class="fab fa-youtube"></i>
+              <i class="fab fa-google"></i>
+            </p>
+            <p>Tải ứng dụng PKTMtravel</p>
+            <a href="#"
+              ><img id="app" src="./Screenshot 2025-03-10 185516.png" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Công ty TNHH phát triển số hóa Hà Nội</p>
+          <p>
+            Copyright © 2025 - Bản Beta đang chạy. Chủ trách nhiệm: Nguyễn KỳKỳ
+            
+          </p>
+        </div>
+      </footer>
+    </div>
+<script src="./main5.js"></script>
+<script src="main7.js"></script>
+    
+</body>
+</html>

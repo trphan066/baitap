@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Tour Nha Trang</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .ngay_sach,
+      .diem_khoi_hanh,
+      .diem_den,
+      .ngay_di,
+      .dong_tour,
+      .phuong_tien {
+        margin-bottom: 15px;
+      }
+      .label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+        color: #269191;
+      }
+      .input_group {
+        display: flex;
+        gap: 10px;
+      }
+      .input_group button {
+        padding: 5px;
+        width: 100px;
+        border: 1px solid #269191;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #f9f9f9;
+        color: #333;
+        cursor: pointer;
+      }
+      .input_group button:hover {
+        background-color: #e0f0f0;
+      }
+      .input_group button.active {
+        background-color: #269191;
+        color: #fff;
+      }
+      .input_group select {
+        padding: 5px;
+        border: 1px solid #269191;
+        border-radius: 5px;
+      }
+      .input_group .apply_button {
+        padding: 5px 10px;
+        background-color: #269191;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .input_group .apply_button:hover {
+        background-color: #1f7575;
+      }
+      .tour_item {
+        display: flex;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .tour_anh {
+        flex: 1;
+        margin-right: 10px;
+      }
+      .tour_anh img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      .tour_thong_tin {
+        flex: 2;
+      }
+      .tour_ten {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #269191;
+      }
+      .tour_chi_tiet {
+        font-size: 14px;
+        color: #555;
+      }
+      .tour_gia {
+        font-size: 16px;
+        color: #e74c3c;
+        font-weight: bold;
+      }
+      .nut_xem_chi_tiet {
+        background-color: #269191;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .nut_xem_chi_tiet:hover {
+        background-color: #1f7575;
+      }
+      #div-ngaydi button {
+        border: solid 2px #269191;
+        border-radius: 3px;
+        padding: 5px;
+        width: 150px;
+        background-color: #f9f9f9;
+        text-align: center;
+      }
+      .tour_gia + button {
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        width: 150px;
+        background-color: #269191;
+        text-align: center;
+      }
+      #div-ngaydi button:hover {
+        background-color: #e0f0f0;
+      }
+      #div-ngaydi button.active {
+        background-color: #269191;
+        color: #fff;
+      }
+      input {
+        border: solid 1px #269191;
+        border-radius: 3px;
+      }
+      #tour1,
+      #tour2,
+      #tour3,
+      #tour4 {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="ngay_sach">
+        <a href="./bookingtour.html"
+          ><button class="nut_xem_chi_tiet">Back</button></a
+        >
+        <p></p>
+        <h2 style="color: #269191" id="thongbao">
+          Hiện quý khách chưa đặt tour nào!
+          <a href="./bookingtour.html">Đặt tour ngay thôi nào!</a>
+        </h2>
+        <div id="tour1" class="tour_item">
+          <div class="tour_anh">
+            <img src="./quang truong lam vien.jpg" alt="Hình ảnh tour" />
+          </div>
+          <div class="tour_thong_tin">
+            <div class="tour_ten">
+              Hành trình Hoa vả Biên: Đà Lạt - Nha Trang
+            </div>
+            <div class="tour_chi_tiet">
+              Mã tour: N00001 | Khởi hành: TP. Hồ Chí Minh<br />
+              Thời gian: 5N4D | Phương tiện: <span id="dichvu1">Xe</span><br />
+              Ngày khởi hành: 19/03, 26/03, 02/04, 09/04, 16/04 <br />
+              Trạng thái: Chờ xác nhận <br />
+              Thanh Toán: <span id="thanhtoantour1">Tiền mặt </span>
+            </div>
+            <div class="tour_gia"><span id="giathuexe1">2.350.000 đ</span></div>
+            <button onclick="m9('tour1')">Hủy tour</button>
+          </div>
+        </div>
+        <div id="tour2" class="tour_item">
+          <div class="tour_anh">
+            <img
+              src="./shutterstock_469672457 hon khoi.webp"
+              alt="Hình ảnh tour"
+            />
+          </div>
+          <div class="tour_thong_tin">
+            <div class="tour_ten">
+              Nha Trang - Biển Nhũ Tiên - Chùa Long Sơn - Lăng gòm Bàu Trúc -
+              Lăng yên Mai Sinh - Khám phá cơ tỏc mòi
+            </div>
+            <div class="tour_chi_tiet">
+              Mã tour: N012345 | Khởi hành: TP. Hồ Chí Minh<br />
+              Thời gian: 3N2D | Phương tiện: <span id="dichvu2">Xe</span><br />
+              Ngày khởi hành: 19/03, 26/03, 02/04, 05/04, 11/04 <br />
+              Trạng thái: Chờ xác nhận <br />
+              Thanh Toán: <span id="thanhtoantour2">Tiền mặt </span>
+            </div>
+            <div class="tour_gia"><span id="giathuexe2">2.390.000 đ</span></div>
+            <button onclick="m9('tour2')">Hủy tour</button>
+          </div>
+        </div>
+        <div id="tour3" class="tour_item">
+          <div class="tour_anh">
+            <img
+              src="./tfd_241003012140_284361_tfd_240229081702_537321_Bai Bien Nha Trang (3).jpg"
+              alt="Hình ảnh tour"
+            />
+          </div>
+          <div class="tour_thong_tin">
+            <div class="tour_ten">
+              Nha Trang - Vinwonders - Hòn Lao - Suối Khoáng Nóng I-Resort - Đà
+              Lạt - Fresh Garden - Puppy Farm - Ga Đà...
+            </div>
+            <div class="tour_chi_tiet">
+              Mã tour: N012346 | Khởi hành: TP. Hồ Chí Minh<br />
+              Thời gian: 3N2D | Phương tiện: <span id="dichvu3">Xe</span> <br />
+              Ngày khởi hành: 19/03, 26/03, 02/04, 05/04, 11/04 <br />
+              Trạng thái: Chờ xác nhận <br />
+              Thanh Toán: <span id="thanhtoantour3">Tiền mặt </span>
+            </div>
+
+            <div class="tour_gia"><span id="giathuexe3">2.150.000 đ</span></div>
+            <button onclick="m9('tour3')">Hủy tour</button>
+          </div>
+        </div>
+        <div id="tour4" class="tour_item">
+          <div class="tour_anh">
+            <img src="./Vin Wonder (2).webp" alt="Hình ảnh tour" />
+          </div>
+          <div class="tour_thong_tin">
+            <div class="tour_ten">
+              Nha Trang - Bến du thuyền Ana Marina - Nha Trang Xưa - Biển Nhũ
+              Tiên - Suối khoáng nóng I-Resort - VinWonders
+            </div>
+            <div class="tour_chi_tiet">
+              Mã tour: N012347 | Khởi hành: TP. Hồ Chí Minh<br />
+              Thời gian: 3N2D | Phương tiện: <span id="dichvu4">Xe</span><br />
+              Ngày khởi hành: 19/03, 26/03, 02/04, 05/04, 11/04 <br />
+              Trạng thái: Chờ xác nhận <br />
+              Thanh Toán: <span id="thanhtoantour4">Tiền mặt </span>
+            </div>
+            <div class="tour_gia"><span id="giathuexe4">2.990.000 đ</span></div>
+            <button onclick="m9('tour4')">Hủy tour</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./main2.js"></script>
+    <script src="./main3.js"></script>
+  </body>
+</html>

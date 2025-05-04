@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="khachsan1.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+</head>
+<body>
+  <div class="hero">
+    <div id="overlay">
+        <!-- Thanh điều hướng (Navbar) -->
+        <nav class="navbar">
+          <div class="navbar-left">
+            <table id="tablenavbar">
+              <tr>
+                <td>
+                  <a href="./index.html" class="nav-item home-link"
+                    ><i class="fas fa-home"></i> Trang chủ</a
+                  >
+                </td>
+                <td>
+                  <a href="./khachsan.html" class="nav-item">Khách sạn</a>
+                </td>
+                <td><a href="./nhahang.html" class="nav-item">Nhà hàng</a></td>
+                <td><a href="./vevuichoi.html" class="nav-item">Vé vui chơi</a></td>
+                <td><a href="./tourdulich.html" class="nav-item">Tour du lịch</a></td>
+                <td><a href="#" class="nav-item">Khác</a></td>
+              </tr>
+            </table>
+          </div>
+          <div id="logg" class="navbar-right"  >
+            <button class="btn-signup">Đăng ký</button>
+            <button class="btn-login">Đăng nhập</button>
+
+          </div>
+        </div>
+          <div class="help">
+          <div class="container">
+            <div class="card">
+                <img src="./quan-an-ngon-o-nha-trang-1-2-1536x1023.jpg" alt="Hotel">
+                <div class="card-content">
+                    <h3> Quán Ốc Xuân Anh</h3>
+                    <div class="stars">★★★★☆</div>
+                    <p>  9C Tháp Bà, Vĩnh Thọ,Cầu Giay, Thành phố Nha Trang, Khánh Hòa,Khánh Hòa,Khánh Hòa</p>
+                    <p class="discount">Giảm giá: 0%</p>
+                    <a onclick="openMap('9C Tháp Bà, Vĩnh Thọ, Thành phố Nha Trang, Khánh Hòa')" class="contact">Đường đi</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./quan-an-ngon-o-nha-trang-2-2.jpg" alt="Hotel">
+                <div class="card-content">
+                    <h3>Bánh căn Hải Sản 24 Tô Hiến Thành</h3>
+                    <div class="stars">★★★★★</div>
+                    <p> 24 Tô Hiến Thành, Tân Lập, Thành phố Nha Trang, Khánh Hòa</p>
+                    <p class="discount">Giảm giá: 0%</p>
+                    <a onclick="openMap('24 Tô Hiến Thành, Tân Lập, Thành phố Nha Trang, Khánh Hòa')" class="contact">Đường đi</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./quan-an-ngon-o-nha-trang-3-1.jpg" alt="Hotel">
+                <div class="card-content">
+                    <h3>Bò né Mỹ Cảnh</h3>
+                    <div class="stars">★★★☆☆</div>
+                    <p> 116 Hoàng Văn Thụ, Phương Sài, Thành phố Nha Trang, Khánh Hòa</p>
+                    <p class="discount">Giảm giá: 10%</p>
+                    <p class="price">450,000 đ</p>
+                    <a onclick="openMap('116 Hoàng Văn Thụ, Phương Sài, Thành phố Nha Trang, Khánh Hòa')" class="contact">Đường đi</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./quan-an-ngon-o-nha-trang-4-1.jpg" alt="Hotel">
+                <div class="card-content">
+                    <h3>Lẩu bò Bà Triệu</h3>
+                    <div class="stars">★★★★★</div>
+                    <p> 3B Bà Triệu, P. Phương Sài, Thành phố Nha Trang, Khánh Hòa,Khánh Hòa,Khánh Hòa,Khánh Hòa</p>
+                    <p class="discount">Giảm giá: 0%</p>
+                    <a onclick="openMap('3B Bà Triệu, P. Phương Sài, Nha Trang, Khánh Hoà')" class="contact">Đường đi</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="hope">
+        <div class="container">
+          <div class="card">
+              <img src="./quan-an-ngon-o-nha-trang-5-1.jpg" alt="Hotel">
+              <div class="card-content">
+                  <h3>Bún cá sứa Tăng Bạt Hổ</h3>
+                  <div class="stars">★★★★☆</div>
+                  <p>03 Tăng Bạt Hổ, phường Vạn Thạnh, Nha Trang
+
+                  </p>
+                  <p class="discount">Giảm giá: 5%</p>
+                  <a onclick="openMap('03 Tăng Bạt Hổ, phường Vạn Thạnh, Nha Trang')" class="contact">Đường đi</a>
+              </div>
+          </div>
+          <div class="card">
+              <img src="./quan-an-ngon-o-nha-trang-6-1-1536x1153.jpg" alt="Hotel">
+              <div class="card-content">
+                  <h3>Hải sản Thanh Sương</h3>
+                  <div class="stars">★★★★☆</div>
+                  <p> 21 Trần Phú, P. Vĩnh Nguyên, Nha Trang, Khánh Hoà</p>
+                  <p class="discount">Giảm giá: 5%</p>
+                  <a onclick="openMap('21 Trần Phú, P. Vĩnh Nguyên, Nha Trang, Khánh Hoà')" class="contact">Đường đi</a>
+              </div>
+          </div>
+          <div class="card">
+              <img src="./quan-an-ngon-o-nha-trang-7-1-1536x1152.jpg" alt="Hotel">
+              <div class="card-content">
+                  <h3>Phá lấu Khanh Quàng</h3>
+                  <div class="stars">★★★★☆</div>
+                  <p> 37 Tháp Bà, Vĩnh Thọ, Thành phố Nha Trang, Khánh Hòa.</p>
+                  <p class="discount">Giảm giá: 5%</p>
+                  
+                  <a onclick="openMap('37 Tháp Bà, Vĩnh Thọ, Thành phố Nha Trang, Khánh Hòa')" class="contact">Đường đi</a>
+              </div>
+          </div>
+          <div class="card">
+              <img src="./quan-an-ngon-o-nha-trang-8-1.jpg" alt="Hotel">
+              <div class="card-content">
+                  <h3>Xôi cá cơm Ngô Sĩ Liên</h3>
+                  <div class="stars">★★★☆☆</div>
+                  <p> 07 Ngô Sĩ Liên, Nha Trang, Khánh Hoà</p>
+                  <p class="discount">Giảm giá: 10%</p>
+                  <a onclick="openMap('07 Ngô Sĩ Liên, Nha Trang, Khánh Hoà')" class="contact">Đường đi</a>
+              </div>
+          </div>
+      </div>
+    </div>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>Khám phá Việt Nam</h3>
+            <div class="footer-section">
+              <p><a>Hợp tác với PKTMtravel</a></p>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Về PKTMtravel</h3>
+            <p>Chính sách</p>
+            <p>Điều khoản</p>
+            <p>Quy chế hoạt động</p>
+            <p>Giải thưởng 63Stravel</p>
+            <p>Đăng ký KD: 00224001987</p>
+            <p>Điện thoại: 0912476286</p>
+            <p>S01-L26 Biệt thự Solasta Mansion Đường Nội,</p>
+            <p>Quận Hà Đông, TP Hà Nội, Việt Nam</p>
+          </div>
+          <div class="footer-section">
+            <h3>Khác</h3>
+            <p>Trang chủ</p>
+            <p>Review du lịch</p>
+            <p>Blog du lịch</p>
+            <p>Bản đồ WC</p>
+            <p>Video</p>
+            <p>Ảnh</p>
+            <p>Cục thi ảnh</p>
+            <p>Điểm du lịch</p>
+          </div>
+          <div class="footer-section">
+            <h3>Về PKTMtravel</h3>
+            <p>
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i> <i class="fab fa-youtube"></i>
+              <i class="fab fa-google"></i>
+            </p>
+            <p>Tải ứng dụng PKTMtravel</p>
+            <a href="#"
+              ><img id="app" src="./Screenshot 2025-03-10 185516.png" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Công ty TNHH phát triển số hóa Hà Nội</p>
+          <p>
+            Copyright © 2025 - Bản Beta đang chạy. Chủ trách nhiệm: Nguyễn KỳKỳ
+            
+          </p>
+        </div>
+      </footer>
+    </div>
+<script src="./main5.js"></script>
+         
+    
+</body>
+</html>

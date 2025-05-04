@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <!-- Thông tin meta và liên kết -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><span id="pktm">PKTM</span>Travel - Ẩm Thực Nha Trang</title>
+    <link rel="stylesheet" href="styamthuc.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  </head>
+ 
+  <body id="bodyid">
+    <div id="overlay">
+      <!-- Thanh điều hướng (Navbar) -->
+      <nav class="navbar">
+        <div class="navbar-left">
+          <table id="tablenavbar">
+            <tr>
+              <td>
+                <div class="divnav">
+                  <a href="./index.html" class="nav-item home-link"
+                    ><i class="fas fa-home"></i> Trang chủ</a
+                  >
+                </div>
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./khachsan.html" class="nav-item">Khách sạn</a>
+                </div>
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./nhahang.html" class="nav-item">Nhà hàng</a>
+                </div>
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./vevuichoi.html" class="nav-item">Vé vui chơi</a>
+                </div>
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./tourdulich.html" class="nav-item">Tour du lịch</a>
+                </div>
+              </td>
+              <td>
+                <div class="divnav"><a href="#" class="nav-item">Khác</a></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="logg" class="navbar-right">
+          <a href="./dangki.html"
+            ><button class="btn-signup">Đăng ký</button></a
+          >
+          <a href="./dangnhap.html"
+            ><button class="btn-login">Đăng nhập</button></a
+          >
+        </div>
+        <div id="dissplaysearch">
+          <button id="button-search" onclick="search()">
+            Tìm Kiếm Theo Địa Điểm
+          </button>
+        </button>
+      </div>
+    </nav>
+    <!-- Tiêu đề chính -->
+    <div id="monan" class="monan">
+      <h1>Món Ăn Ngon Nha Trang</h1>
+      <p>Khám phá những hương vị đặc trưng của thành phố biển xinh đẹp với những món ăn đậm đà, hấp dẫn và khó quên.</p>
+      <div class="container">
+        <!-- Danh sách  món ăn -->
+        <div class="dish-card">
+          <img src="./bun-ca-nha-trang.webp" alt="Bún Cá Nha Trang">
+          <div class="info">
+            <h3>Bún Cá Nha Trang</h3>
+            <p>Món bún đặc sản với nước dùng trong, vị thanh ngọt từ cá tươi.</p>
+            <p>Chả cá có vị dai ngon đậm đà, cá dầm béo thơm kết hợp cùng nước dùng đậm đà pha chút chua thanh của cà chua và thơm, xen lẫn vào đó là vị cay cay của ớt, giòn giòn của các loại rau sống. Tất cả sẽ mang đến cho bạn một trải nghiệm ẩm thực mới lạ.</p>
+          </div>
+        </div>
+        <div class="dish-card">
+          <img src="./nem-ninh-hoa-nha-trang-1-1024x1024.jpg" alt="Nem Nướng Ninh Hòa">
+          <div class="info">
+            <h3>Nem Nướng Ninh Hòa</h3>
+            
+            <p>Trải qua bao nhiêu thăng trầm, nem nướng Ninh Hòa giờ đây không chỉ là món ăn rất đỗi quen thuộc, được yêu thích của người dân nơi đây. Không những thế, món ăn còn được rất nhiều du khách lựa chọn làm quà ý nghĩa trong những bữa ăn của gia đình Việt. Chẳng thế mà có câu nói rằng: “Đi đâu cũng nhớ Khánh Hòa, nhớ Nha Trang gió mát, nhớ Ninh Hòa nhiều nem”. Đây như là một cách ghi nhớ món quà quê dân dã mà đậm đà nổi tiếng của vùng đất này.</p>
+          </div>
+        </div>
+        <div class="dish-card">
+          <img src="./banh-can-nha-trang-1_1630839999.jpg" alt="Bánh Căn">
+          <div class="info">
+            <h3>Bánh Căn</h3>
+           
+            <p>Bánh căn Nha Trang được làm từ bột gạo, trứng và các loại nhân như tôm, mực, thịt bò, thịt heo… Bánh được nướng trong khuôn đất nung, tạo nên những chiếc bánh nhỏ xinh, vàng ươm, giòn rụm bên ngoài nhưng lại mềm mại bên trong. Bánh căn thường được ăn kèm với nước mắm chua ngọt và rau sống.</p>
+          </div>
+        </div>
+        <div class="dish-card">
+          <img src="./banh-xeo-muc.jpg" alt="Bánh Xèo Mực">
+          <div class="info">
+            <h3>Bánh Xèo Mực</h3>
+            
+            <p>Bánh xèo mực Nha Trang là món ăn đặc sản nổi tiếng của thành phố biển. Bánh được làm từ bột gạo, nước cốt dừa và nhân là mực tươi, tôm, thịt heo. Bánh được chiên giòn rụm bên ngoài, bên trong mềm mại và thơm ngon. Món ăn này thường được ăn kèm với rau sống và nước mắm chua ngọt.</p>
+          </div>
+        </div>
+        <div class="dish-card"><img src="./banh-can-nha-trang-1_1630839999.jpg" alt="Bánh Ướt Diên Khánh">
+          <div class="info"><h3>Bánh Ướt Diên Khánh</h3>
+           
+            <p>Bánh ướt Diên Khánh là món ăn đặc sản nổi tiếng của tỉnh Khánh Hòa. Bánh được làm từ bột gạo, nước cốt dừa và nhân là thịt heo, tôm, trứng. Bánh được hấp chín mềm mại, thơm ngon và có vị béo ngậy của nước cốt dừa. Món ăn này thường được ăn kèm với nước mắm chua ngọt và rau sống.</p>
+
+        
+        </div>
+        </div>
+        <div class="dish-card"><img src="./thanh-pham-339.jpg" alt="Gỏi Cá Mai">
+          <div class="info"><h3>Gỏi Cá Mai
+          </h3>
+          
+            <p>Gỏi cá mai là món ăn đặc sản nổi tiếng của Nha Trang. Món ăn này được làm từ cá mai tươi sống, thái mỏng và trộn với các loại rau thơm, hành tây, đậu phộng rang và nước mắm chua ngọt. Gỏi cá mai có vị tươi ngon, giòn giòn và rất hấp dẫn.</p>
+        </div>
+        </div>
+        <div class="dish-card"><img src="./quan-hai-san-nha-trang-19.jpg" alt="Hải Sản Nướng">
+          <div class="info"><h3>Hải Sản Nướng</h3>
+          
+            <p>Hải sản nướng Nha Trang là món ăn đặc sản nổi tiếng của thành phố biển. Món ăn này được làm từ các loại hải sản tươi sống như tôm, cua, mực, ngao, sò điệp… được ướp gia vị và nướng trên bếp than hồng. Hải sản nướng có vị ngọt tự nhiên, thơm ngon và rất hấp dẫn.</p>
+        </div>
+        </div>
+        <div class="dish-card"><img src="./banh-dap-nha-trang-2_1688054522.jpg" alt="Bánh Đập">
+          <div class="info"><h3>Bánh Đập</h3>
+            
+            <p>Bánh đập Nha Trang là món ăn đặc sản nổi tiếng của thành phố biển. Món ăn này được làm từ bánh tráng và bánh ướt, được chiên giòn và ăn kèm với nước mắm chua ngọt. Bánh đập có vị giòn rụm, thơm ngon và rất hấp dẫn.</p>
+        </div>
+        </div>
+        <div class="dish-card"><img src="./banh-mi-cha-ca-Nha-Trang-1.jpg" alt="Bánh Mì Chả Cá">
+          <div class="info"><h3>Bánh Mì Chả Cá</h3>           
+            <p>Bánh mì chả cá Nha Trang là món ăn đặc sản nổi tiếng của thành phố biển. Món ăn này được làm từ bánh mì nóng giòn, nhân là chả cá tươi sống, được chiên vàng và ăn kèm với rau sống và nước mắm chua ngọt. Bánh mì chả cá có vị giòn rụm, thơm ngon và rất hấp dẫn.</p>
+        </div>
+        </div>
+        <div class="dish-card"><img src="./Quan-oc-Nha-Trang-5.jpg" alt="Ốc Nướng Mỡ Hành">
+          <div class="info"><h3>Ốc Nướng Mỡ Hành</h3>
+            <p>Món ăn vặt hấp dẫn với vị béo thơm từ mỡ hành và đậu phộng.</p>
+
+
+        </div>
+        </div>
+        <div class="dish-card"><img src="./NGvCErOr-cha-ca-nha-trang-6.jpg" alt="Chả Cá Nha Trang">
+          <div class="info"><h3>Chả Cá Nha Trang</h3>
+            <p>Chả cá Nha Trang là món ăn đặc sản nổi tiếng của thành phố biển. Món ăn này được làm từ cá tươi sống, được xay nhuyễn và trộn với các loại gia vị như hành, tiêu, ớt, tỏi… Sau đó, chả cá được nướng trên bếp than hồng cho đến khi vàng đều và thơm ngon. Món ăn này thường được ăn kèm với bánh tráng, rau sống và nước mắm chua ngọt. Chả cá Nha Trang có vị ngọt tự nhiên, thơm ngon và rất hấp dẫn.
+          </p>
+            </div>
+        </div>
+        <div class="dish-card"><img src="./mi-quang-nha-trang-3.jpg" alt="Mì Quảng Nha Trang">
+          <div class="info"><h3>Mì Quảng Nha Trang</h3>
+            <p>Mì Quảng Nha Trang là mì nước, cọng mì nhỏ, dai tương tự như sợi hủ tiếu, màu vàng ươm trông rất bắt mắt. Thay vì nấu cùng với những nguyên liệu như thịt heo, thịt gà như mì xứ Quảng, thì cách nấu mì Quảng Nha Trang sẽ dùng chả cá, chả lụa, chả cua, trứng cút, thịt luộc, thịt viên… Đặc biệt là nước dùng luôn được chan đầy ắp và không có bánh tráng ăn kèm như thông thường. Bên trên tô mì Quảng Nha Trang rắc thêm hành lá, đầu hành, hành phi và đậu phộng, khi ăn bạn có thể thêm chút mắm ruốc và ớt cay để tô mì Quảng đậm đà hơn.</p>
+
+        </div>
+        </div>
+        <div class="dish-card"><img src="./banh-canh-Nha-Trang-4.jpg" alt="Bánh Canh Chả Cá">
+          <div class="info"><h3>Bánh Canh Chả Cá</h3>
+           
+            <p>Bánh canh chả cá Nha Trang là món ăn đặc sản nổi tiếng của thành phố biển. Món ăn này được làm từ bột gạo, nước cốt dừa và nhân là chả cá tươi sống, được xay nhuyễn và trộn với các loại gia vị như hành, tiêu, ớt, tỏi… Sau đó, bánh canh được nấu trong nước dùng ngọt thanh từ xương heo và hải sản. Món ăn này thường được ăn kèm với rau sống và nước mắm chua ngọt. Bánh canh chả cá Nha Trang có vị ngọt tự nhiên, thơm ngon và rất hấp dẫn.</p>
+        </div>
+        </div>
+                   <div class="dish-card"><img src="./bo-ne-nha-trang-1.jpg" alt="Bò Né">
+          <div class="info"><h3>Bò Né</h3>
+            <p>Món bò né bưng ra nóng hổi, ăn kèm bánh mì giòn rụm.</p>
+
+        </div>
+        </div>
+        <div class="dish-card"><img src="./banh-beo-nha-trang-4_1688386013.jpg" alt="Bánh Bèo">
+          <div class="info"><h3>Bánh Bèo</h3>
+            <p>Những chiếc bánh nhỏ với topping tôm, mỡ hành, hành phi hấp dẫn.</p>
+
+
+        </div>
+        </div>
+        <div class="dish-card"><img src="./heo-quay-banh-hoi.jpg" alt="Bánh Hỏi Heo Quay">
+          <div class="info"><h3>Bánh Hỏi Heo Quay</h3>
+            <p>Bánh hỏi heo quay sẽ là món ăn thú vị, mới lạ trong bữa cơm trưa của gia đình. Đây sẽ là món ăn hấp dẫn mọi thành viên trong gia đình ngay từ cái nhìn đầu tiên.Món ăn thanh mát, thơm ngon với bánh hỏi và heo quay giòn bì.</p>
+        </div>
+        </div>
+        <div class="dish-card"><img src="./optimize_banh-trang-nuong-nha-trang-5.png" alt="Bánh Tráng Nướng">
+          <div class="info"><h3>Bánh Tráng Nướng</h3><p>Bánh tráng nướng Nha Trang là món ăn đặc sản hấp dẫn du khách bởi hương vị thơm ngon và sự đa dạng trong các quán nổi tiếng. - Từ quán vỉa hè đến nhà hàng sang trọng, mỗi địa điểm đều mang đến trải nghiệm độc đáo với nhân bánh phong phú như mắm ruốc, trứng, bò khô và các loại gia vị.</p></div>
+        </div>
+        <div class="dish-card"><img src="./anh-mo-ta.jpg" alt="Chè Khúc Bạch">
+          <div class="info"><h3>Chè Khúc Bạch</h3>
+            <p>Chè khúc bạch là một trong những món tráng miệng được yêu thích bởi sự thanh mát, béo nhẹ của kem sữa và vị ngọt tự nhiên từ trái cây. Món chè này có nguồn gốc từ ẩm thực Trung Hoa, nhưng khi du nhập vào Việt Nam đã được biến tấu để phù hợp với khẩu vị địa phương.Món tráng miệng mát lạnh, thơm vị sữa và hạnh nhân.</p>
+        </div>
+        </div>
+        <div class="dish-card"><img src="./banh-flan-dong-suong-nha-trang-1-min-1678264319.jpg" alt="Bánh Flan Nha Trang">
+          <div class="info"><h3>Bánh Flan Nha Trang</h3>
+            <p>Mềm mịn, béo ngậy và thơm hương caramel hấp dẫn.</p>
+        </div>
+        </div>
+        <div class="dish-card"><img src="./hq720.jpg" alt="Cá Nướng Muối Ớt">
+          <div class="info"><h3>Cá Nướng Muối Ớt</h3>
+            <p>Chè khúc bạch là một trong những món tráng miệng được yêu thích bởi sự thanh mát, béo nhẹ của kem sữa và vị ngọt tự nhiên từ trái cây. Món chè này có nguồn gốc từ ẩm thực Trung Hoa, nhưng khi du nhập vào Việt Nam đã được biến tấu để phù hợp với khẩu vị địa phương.</p></div>
+        </div>
+        <div class="dish-card"><img src="./Nha-hang-lau-huong-bang-nha-trang.jpg" alt="Lẩu Hải Sản">
+          <div class="info"><h3>Lẩu Hải Sản</h3>
+            <p>Các món ăn được chế biến với hương vị đậm đà, tươi ngon, cực kỳ hấp dẫn nhờ nguồn nguyên liệu được lựa chọn kỹ lưỡng và đầu bếp tài ba của quán. Nhân viên phục vụ khá nhanh nhẹn, thân thiện mặc dù quán lúc nào cũng đông khách.Nồi lẩu nghi ngút khói, đầy ắp tôm, cua, mực tươi sống.</p>
+        </div>
+        </div>
+        <div class="dish-card"><img src="./bun-sua-nha-trang-1_1632704123-1.webp" alt="Bún Sứa">
+          <div class="info"><h3>Bún Sứa</h3>
+            <p>.Bún sứa Nha Trang có nguồn gốc từ ngư dân Nha Trang. Trước đây, khi ngư dân đi biển, họ thường bắt được nhiều loại hải sản khác nhau, trong đó có sứa. Tuy nhiên, do sứa không được ưa chuộng và không có giá trị thương mại cao, nên ngư dân đã nghĩ ra cách để tận dụng loại hải sản này và biến nó thành một món ăn ngon.Món đặc trưng của Nha Trang với sứa giòn giòn, thanh mát.</p>
+        </div>
+        </div>
+        <div class="dish-card"><img src="./image-chay-nuoc-mieng-mon-goi-oc-giac-nha-trang-me-met-ngay-tu-mieng-dau-tien-168414123152630.jpg" alt="Gỏi Ốc Giác">
+          <div class="info"><h3>Gỏi Ốc Giác</h3>
+            <p>Món gỏi ốc giác không thể thiếu đu đủ sống bào sợi mỏng, rau răm thái nhỏ, lạc rang, hành phi chấm với nước mắm tỏi ớt là đủ vị.
+
+                Thịt ốc sau khi được làm sạch, mang đi luộc chín và cắt mỏng, chấm với nước mắm gừng, tỏi ớt đã được pha sẵn – đặc sắc của món gỏi ốc giác. Ốc sau khi được luộc chín sẽ đem đi xắt từng sợi nhỏ cùng với thịt ba chỉ hoặc là thịt lợn nọng đã được luộc chín và cắt đều. Song song với đó là đu đủ sống bào mỏng, rau răm xắt nhỏ, hành tây và đậu phộng rang, hành phi,… chấm với nước mắm pha tỏi, ớt chua ngọt.</p>
+        </div>
+        </div>
+        <div class="dish-card"><img src="./cach-nau-sup-cua-trung-cut.jpg" alt="Súp Cua Trứng Cút">
+          <div class="info"><h3>Súp Cua Trứng Cút</h3>
+            <p>Súp sánh mịn, ngọt vị cua và thơm từ trứng cút hấp dẫn.</p>
+        </div>
+        </div>
+        <div class="dish-card"><img src="./hoc-ngay-cach-lam-banh-khoai-mi-nuong-mem-thom-cuc-hap-dan-va-de-lam-202203021512323991.jpg" alt="Bánh Khoai Mì Nướng">
+          <div class="info"><h3>Bánh Khoai Mì Nướng</h3>
+            <p>Bánh khoai mì nướng là một loại bánh được làm từ khoai mì (còn gọi là sắn), một loại củ giàu tinh bột và dinh dưỡng. Bánh có vị ngọt thanh, thơm mùi dừa và bơ, thường được nướng vàng giòn bên ngoài nhưng mềm mịn bên trong. Đây là món ăn không chỉ ngon miệng mà còn mang đậm hương vị quê hương..</p>
+        </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Khám phá Việt Nam</h3>
+        <div class="footer-section">
+          <p><a href="#">Hợp tác với PKTMtravel</a></p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Về PKTMtravel</h3>
+        <p>Chính sách</p>
+        <p>Điều khoản</p>
+        <p>Quy chế hoạt động</p>
+        <p>Giải thưởng 63Stravel</p>
+        <p>Đăng ký KD: 00224001987</p>
+        <p>Điện thoại: 0912476286</p>
+        <p>S01-L26 Biệt thự Solasta Mansion Đường Nội,</p>
+        <p>Quận Hà Đông, TP Hà Nội, Việt Nam</p>
+      </div>
+      <div class="footer-section">
+        <h3>Khác</h3>
+        <p>Trang chủ</p>
+        <p>Review du lịch</p>
+        <p>Blog du lịch</p>
+        <p>Bản đồ WC</p>
+        <p>Video</p>
+        <p>Ảnh</p>
+        <p>Cục thi ảnh</p>
+        <p>Điểm du lịch</p>
+      </div>
+      <div class="footer-section">
+        <h3>Về PKTMtravel</h3>
+        <p>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i> <i class="fab fa-youtube"></i>
+          <i class="fab fa-google"></i>
+        </p>
+        <p>Tải ứng dụng PKTMtravel</p>
+        <a href="#"
+          ><img id="app" src="./Screenshot 2025-03-10 185516.png" />
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Công ty TNHH phát triển số hóa Hà Nội</p>
+      <p>
+        Copyright © 2025 - Bản Beta đang chạy. Chủ trách nhiệm: Nguyễn Hồng
+        Mai
+      </p>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
+</body>
+</html>

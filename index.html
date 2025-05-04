@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><Span id="pktm">PKTM</Span>Travle - Du lịch Việt Nam</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    
+  </head>
+  <body id="bodyid">
+    <div id="overlay">
+      <!-- Thanh điều hướng (Navbar) -->
+      <nav class="navbar">
+        <div class="navbar-left">
+          <table id="tablenavbar">
+            <tr>
+              <td>
+                <div class="divnav">
+                  <a href="./index.html" class="nav-item home-link"
+                    ><i class="fas fa-home"></i> Trang chủ</a
+                  >
+                </div>
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./khachsan.html" class="nav-item home-link"><i class="fas fa-hotel"></i>Khách sạn</a>
+                </div>
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./nhahang.html" class="nav-item home-link"><i class="fas fa-utensils"></i>Nhà hàng</a>
+                </div>
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./vevuichoi.html" class="nav-item home-link"><i class="fas fa-gamepad"></i>Vé vui chơi</a>
+                </div>
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./tourdulich.html" class="nav-item home-link"><i class="fas fa-plane-departure"></i>Tour du lịch</a>
+                </div>
+              </td>
+              <td>
+                <div class="divnav"><a onclick="n1()" class="nav-item home-link"><i class="fas fa-question"></i>Khác</a></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="logg" class="navbar-right">
+          <a href="./dangki.html"
+            ><button class="btn-signup">Đăng ký</button></a
+          >
+          <a href="./dangnhap.html"
+            ><button class="btn-login">Đăng nhập</button></a
+          >
+        </div>
+        <div id="dissplaysearch">
+          <button id="button-search" onclick="search()">
+            Tìm Kiếm Theo Địa Điểm
+          </button>
+        </div>
+      </nav>
+      <div id="divsearch">
+        <div id="">
+          <h3><span id="pktm1">PKTM</span>Travel</h3>
+          <div id="divbysearch">
+            <div>
+              <select name="location1" id="select1">
+                <option value="">Lọc Theo Địa Điểm</option>
+                <option value="hanoi" data-href="./hanoi.html">Hà Nội</option>
+                <option value="dalat" data-href="./dalat.html">Đà Lạt</option>
+                <option value="danang" data-href="./danang.html">
+                  Đà Nẵng
+                </option>
+                <option value="phuquoc" data-href="./phuquoc.html">
+                  Phú Quốc
+                </option>
+                <option value="nhatrang" data-href="./nhatrang.html">
+                  Nha Trang
+                </option>
+                <option value="halong" data-href="./halong.html">
+                  Hạ Long
+                </option>
+              </select>
+            </div>
+            <div>
+              <select name="location2" id="select2">
+                <option value="">Lọc Theo Món Ăn</option>
+                <option value="hanoi" data-href="./banhmi.html">Bánh Mì</option>
+                <option value="dalat" data-href="./pho.html">Phở</option>
+                <option value="danang" data-href="./haisan.html">
+                  Hải Sản
+                </option>
+                <option value="phuquoc" data-href="./duongpho.html">
+                  Đường Phố
+                </option>
+                <option value="nhatrang" data-href="./dokho.html">
+                  Đồ Khô
+                </option>
+                <option value="halong" data-href="./dosong.html">
+                  Đồ Sống
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Banner quảng cáo -->
+      <div class="banner">
+        <div class="banner-overlay">
+          <a href="./dao-hon-mun-1.jpg"
+            ><img
+              src="./dao-khi-nha-trang4.jpg"
+              alt="Khách sạn"
+              class="banner-img"
+          /></a>
+          <a href="./halong.html"
+            ><img
+              src="./thap-ba-ponagar-1.jpg"
+              alt="Nhà hàng"
+              class="banner-img"
+          /></a>
+
+          <a href="./dalat.html"
+            ><img
+              src="./vinh-van-phong-nha-trang.jpg"
+              alt="Du lịch"
+              class="banner-img"
+          /></a>
+          <a href="./danang.html"
+            ><img
+              src="./đảo-hòn-tằm-nha-trang-6.jpg"
+              alt="Khách sạn"
+              class="banner-img"
+          /></a>
+          <a href="./nhatrang.html"
+            ><img src="./dao-hon-mun-1.jpg" alt="Nhà hàng" class="banner-img"
+          /></a>
+          <a href="./phuquoc.html"
+            ><img src="./VinpearlLand4.jpg" alt="Du lịch" class="banner-img"
+          /></a>
+        </div>
+        <div class="banner-content">
+          <h1><span id="pktm">PKTM</span>Travle</h1>
+          <p>Nền tảng OTA du lịch Việt Nam</p>
+          <p class="highlight">
+            Mới hợp tác
+            <span>khách sạn, nhà hàng, công ty du lịch lữ hành</span>
+          </p>
+        </div>
+        <button class="banner-btn-prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="banner-btn-next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Nút điều hướng dưới banner -->
+      <div id="review">
+        <span>
+          <div>
+            <h2>
+              Thành phố Nha Trang đẹp như một bức tuyệt tác của tự nhiên và con
+              người với nhiều địa điểm du lịch Nha Trang nổi tiếng. Cảnh quan
+              thiên nhiên đa dạng đã làm nên sức hút khó cưỡng của những hoạt
+              động du lịch nơi đây, cùng với nền ẩm thực phong phú và con người
+              thân thiện – Nha Trang như đã chiếm trọn trái tim du khách muôn
+              phương. Giờ thì hãy cùng PKTMTravel khám phá những địa điểm thú vị
+              này ngay nhé!
+            </h2>
+            <h3 style="color: #269191">
+              Một số địa điểm du lịch nổi tiếng ở Nha Trang <br />
+              <h4 style="color: #269191">( Click vào ảnh để xem chi tiết):</h4>
+            </h3>
+            <ol>
+              <div id="divallimg">
+                <div class="img2">
+                  <div class="divimg">
+                    <li>Vinpearl Land</li>
+                    <a href="./vinpearl.html"
+                      ><img
+                        class="imgreview"
+                        src="./vinpearl-nha-trang.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="divimg">
+                    <li>Đảo Hòn Mun</li>
+                    <a href="./halong.html"
+                      ><img class="imgreview" src="./dao-hon-mun-1.jpg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="img2">
+                  <div class="divimg">
+                    <li>Đảo Hòn Tằm</li>
+                    <a href="./danang.html"
+                      ><img
+                        class="imgreview"
+                        src="./đảo-hòn-tằm-nha-trang-6.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="divimg">
+                    <li>Tháp bà Ponagar</li>
+                    <a href="./nhatrang.html"
+                      ><img
+                        class="imgreview"
+                        src="./thap-ba-ponagar-1.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="img2">
+                  <div class="divimg">
+                    <li>Vịnh Vân Phong</li>
+                    <a href="./dalat.html"
+                      ><img
+                        class="imgreview"
+                        src="./vinh-van-phong-nha-trang.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="divimg">
+                    <li>Đảo Khỉ Nha Trang</li>
+                    <a href="./phuquoc.html">
+                      <img
+                        class="imgreview"
+                        src="./dao-khi-nha-trang4.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </ol>
+            <h3 style="color: #269191 ; text-align: center; " >
+              Việt Nam là điểm đến hấp dẫn, phù hợp cho cả du lịch văn hóa,
+              thiên nhiên và nghỉ dưỡng!
+            </h3>
+          </div>
+        </span>
+        <div class="banner-buttons">
+          <a href="./Lễ hội- sự Kiện.html"
+            ><button class="btn-event">Lễ Hội - Sự Kiện</button></a
+          >
+          <a href="./amthucnhatrang.html"><button class="btn-event">Ẩm Thực</button></a>
+          <a href="./dichvudulich.html"
+            ><button class="btn-event">Dịch Vụ Du Lịch</button></a
+          >
+          <a href="./diemdennoibat.html"
+            ><button class="btn-place">Điểm Đến Nổi Bật</button></a
+          >
+          <a onclick="m13()"
+            ><button class="btn-view-all">Booking Tour</button></a
+          >
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>Khám phá Việt Nam</h3>
+            <div class="footer-section">
+              <p><a href="#">Hợp tác với PKTMtravel</a></p>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Về PKTMtravel</h3>
+            <p>Chính sách</p>
+            <p>Điều khoản</p>
+            <p>Quy chế hoạt động</p>
+            <p>Giải thưởng 63Stravel</p>
+            <p>Đăng ký KD: 00224001987</p>
+            <p>Điện thoại: 0912476286</p>
+            <p>S01-L26 Biệt thự Solasta Mansion Đường Nội,</p>
+            <p>Quận Hà Đông, TP Hà Nội, Việt Nam</p>
+          </div>
+          <div class="footer-section">
+            <h3>Khác</h3>
+            <p>Trang chủ</p>
+            <p>Review du lịch</p>
+            <p>Blog du lịch</p>
+            <p>Bản đồ WC</p>
+            <p>Video</p>
+            <p>Ảnh</p>
+            <p>Cục thi ảnh</p>
+            <p>Điểm du lịch</p>
+          </div>
+          <div class="footer-section">
+            <h3>Về PKTMtravel</h3>
+            <p>
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i> <i class="fab fa-youtube"></i>
+              <i class="fab fa-google"></i>
+            </p>
+            <p>Tải ứng dụng PKTMtravel</p>
+            <a href="#"
+              ><img id="app" src="./apppp.png" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Công ty TNHH phát triển số hóa Hà Nội</p>
+          <p>
+            Copyright © 2025 - Bản Beta đang chạy. Chủ trách nhiệm: Nguyễn Hồng
+            Mai
+          </p>
+        </div>
+      </footer>
+    </div>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

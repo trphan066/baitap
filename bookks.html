@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Tour Nha Trang</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      .container {
+        max-width: 300px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .ngay_sach,
+      .diem_khoi_hanh,
+      .diem_den,
+      .ngay_di,
+      .dong_tour,
+      .phuong_tien {
+        margin-bottom: 15px;
+      }
+      .label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+        color: #269191;
+      }
+      .input_group {
+        display: flex;
+        gap: 10px;
+      }
+      .input_group button {
+        padding: 5px;
+        width: 100px;
+        border: 1px solid #269191;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #f9f9f9;
+        color: #333;
+        cursor: pointer;
+      }
+      .input_group button:hover {
+        background-color: #e0f0f0;
+      }
+      .input_group button.active {
+        background-color: #269191;
+        color: #fff;
+      }
+      .input_group select {
+        padding: 5px;
+        border: 1px solid #269191;
+        border-radius: 5px;
+      }
+      .input_group .apply_button {
+        padding: 5px 10px;
+        background-color: #269191;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .input_group .apply_button:hover {
+        background-color: #1f7575;
+      }
+      .tour_item {
+        display: flex;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .tour_anh {
+        flex: 1;
+        margin-right: 10px;
+      }
+      .tour_anh img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      .tour_thong_tin {
+        flex: 2;
+      }
+      .tour_ten {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #269191;
+      }
+      .tour_chi_tiet {
+        font-size: 14px;
+        color: #555;
+      }
+      .tour_gia {
+        font-size: 16px;
+        color: #e74c3c;
+        font-weight: bold;
+      }
+      .nut_xem_chi_tiet {
+        background-color: #269191;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .nut_xem_chi_tiet:hover {
+        background-color: #1f7575;
+      }
+      #div-ngaydi button {
+        border: solid 2px #269191;
+        border-radius: 3px;
+        padding: 5px;
+        width: 150px;
+        background-color: #f9f9f9;
+        text-align: center;
+      }
+      #div-ngaydi button:hover {
+        background-color: #e0f0f0;
+      }
+      #div-ngaydi button.active {
+        background-color: #269191;
+        color: #fff;
+      }
+      input {
+        border: solid 1px #269191;
+        border-radius: 3px;
+      }
+      .tb{
+        font-size: smaller;
+        color: #e74c3c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input_group">
+        <a href="./khachsan.html"><button onclick="m3(this)">Back </button></a>
+        </div>
+      <div class="ngay_sach"><br>
+        <span class="label">Tên Khách Sạn</span>
+        <div class="input_group">
+            <div>
+          <input id="nameks" type="text"><br>
+          
+        </div>
+        </div>
+      <div class="ngay_sach"><br>
+        <span class="label">Họ Tên </span>
+        <div class="input_group">
+            <div>
+          <input id="name" type="text"><br>
+          <span class="tb" id="nametb"></span>
+        </div>
+        </div>
+      </div>
+      <div class="diem_khoi_hanh">
+        <span class="label">Số Điện Thoại </span>
+        <div class="input_group">
+            <div>
+<input id="sdt" type="text"><br>
+<span class="tb" id="sdttb"></span></div>
+        </div>
+      </div>
+      <div class="ngay_di">
+        <span class="label">Ngày ở:</span>
+        <div id="div-ngaydi">
+          <div>
+          <input id="ngaydi" type="datetime-local" /><br>
+          <span class="tb" id="ngayditb"></span></div>
+        </div>
+      </div>
+        <div class="ngay_sach"><br>
+            <span class="label">Số phòng</span>
+            <div class="input_group">
+                <div>
+              <input id="sophong" type="number"><br>
+              <span class="tb" id="sophongtb"></span>
+            </div>
+            </div>
+            <div class="ngay_sach"><br>
+                <span class="label">Số người ở mỗi phòng</span>
+                <div class="input_group">
+                    <div>
+                  <select name="" id="songuoio">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                  
+                </div>
+                </div>
+      <div class="dong_tour">
+        <span class="label">Phương Thức Thanh Toán</span>
+        <div class="input_group">
+          <select name="" id="ptttoan">
+            <option value="tienmat">Trực tiếp tại khách sạn</option>
+          </select>
+    </div>
+      </div>
+        <div class="input_group">
+        <button onclick="m21()">Đặt Phòng</button></div>
+      </div>
+<script src="main7.js"></script>
+  </body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Tour Nha Trang</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+      .hero {
+        position: relative;
+      }
+      #overlay {
+        position: relative;
+        width: 100%;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-left {
+        flex: 1;
+      }
+      #tablenavbar {
+        border-collapse: collapse;
+      }
+      #tablenavbar td {
+        padding: 0 15px;
+      }
+      .nav-item {
+        text-decoration: none;
+        color: #269191;
+        font-weight: bold;
+      }
+      .nav-item:hover {
+        color: #1f7575;
+      }
+      .navbar-right {
+        display: flex;
+        gap: 10px;
+      }
+      .btn-signup,
+      .btn-login {
+        padding: 5px 15px;
+        border: 1px solid #269191;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        color: #333;
+        cursor: pointer;
+      }
+      .btn-signup:hover,
+      .btn-login:hover {
+        background-color: #e0f0f0;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .ngay_sach,
+      .diem_khoi_hanh,
+      .diem_den,
+      .ngay_di,
+      .dong_tour,
+      .phuong_tien {
+        margin-bottom: 15px;
+      }
+      .label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+        color: #269191;
+      }
+      .input_group {
+        display: flex;
+        gap: 10px;
+      }
+      .input_group button {
+        padding: 5px;
+        width: 100px;
+        border: 1px solid #269191;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #f9f9f9;
+        color: #333;
+        cursor: pointer;
+      }
+      .input_group button:hover {
+        background-color: #e0f0f0;
+      }
+      .input_group button.active {
+        background-color: #269191;
+        color: #fff;
+      }
+      .input_group select {
+        padding: 5px;
+        border: 1px solid #269191;
+        border-radius: 5px;
+      }
+      .input_group .apply_button {
+        padding: 5px 10px;
+        background-color: #269191;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .input_group .apply_button:hover {
+        background-color: #1f7575;
+      }
+      .card {
+        display: flex;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+      }
+      .tour_anh {
+        flex: 1;
+        margin-right: 10px;
+      }
+      .tour_anh img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      .card-content {
+        flex: 2;
+      }
+      .tour_ten {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #269191;
+      }
+      .tour_chi_tiet {
+        font-size: 14px;
+        color: #555;
+      }
+      .tour_gia {
+        font-size: 16px;
+        color: #e74c3c;
+        font-weight: bold;
+      }
+      .contact {
+        transition: transform 0.3s ease-in-out;
+        background-color: #269191;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .contact:hover {
+        background-color: #1f7575;
+      }
+      #div-ngaydi button {
+        border: solid 2px #269191;
+        border-radius: 3px;
+        padding: 5px;
+        width: 150px;
+        background-color: #f9f9f9;
+        text-align: center;
+      }
+      #div-ngaydi button:hover {
+        background-color: #e0f0f0;
+      }
+      #div-ngaydi button.active {
+        background-color: #269191;
+        color: #fff;
+      }
+      input {
+        border: solid 1px #269191;
+        border-radius: 3px;
+      }
+      .stars {
+        color: #ffd700;
+        margin-bottom: 5px;
+      }
+      .discount {
+        font-size: 14px;
+        color: #555;
+      }
+      .nut_xem_chi_tiet {
+        transition: transform 0.3s ease-in-out;
+        background-color: #269191;
+        border: none;
+        padding: 7px;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+      }
+      #divapdung button {
+        transition: transform 0.3s ease-in-out;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      #divapdung button:hover,
+      .nut_xem_chi_tiet:hover {
+        transform: scale(1.1);
+      }
+      .footer {
+        background-color: #f4f4f4;
+        padding: 20px 0;
+        margin-top: 20px;
+      }
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .footer-section {
+        flex: 1;
+        margin-right: 20px;
+      }
+      .footer-section h3 {
+        color: #269191;
+        margin-bottom: 10px;
+      }
+      .footer-section p {
+        margin: 5px 0;
+        color: #555;
+      }
+      .footer-section a {
+        color: #269191;
+        text-decoration: none;
+      }
+      .footer-section a:hover {
+        color: #1f7575;
+      }
+      .footer-bottom {
+        text-align: center;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+        margin-top: 20px;
+        color: #555;
+      }
+      #app {
+        width: 100px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div id="overlay">
+        <!-- Thanh điều hướng (Navbar) -->
+        <div class="container">
+          <div class="ngay_sach">
+            <a href="./index.html"
+              ><button class="nut_xem_chi_tiet">Về Trang Chủ</button></a
+            >
+            <a href="./lichsu.html"
+              ><button class="nut_xem_chi_tiet">
+                Lịch Sử Đặt Khách Sạn
+              </button></a
+            >
+            <p></p>
+            <span class="label">Giá Tiền</span>
+            <div class="input_group">
+              <select id="giatien">
+                <option value="tatca">Tất Cả</option>
+                <option value="duoi500">Dưới 500.000 VNĐ 1 giờ</option>
+                <option value="tren500">Trên 500.000 VNĐ 1 giờ</option>
+              </select>
+            </div>
+          </div>
+          <div class="ngay_sach">
+            <span class="label">Trạng Thái:</span>
+            <div class="input_group" id="div-ngaydi">
+              <select name="" id="trangthai">
+                <option value="controng">Còn Phòng</option>
+              </select>
+            </div>
+          </div>
+          <div class="ngay_sach">
+            <span class="label">Địa Điểm:</span>
+            <div class="input_group" id="div-ngaydi">
+              <select name="" id="diaiem">
+                <option value="nhatrang">Nha Trang</option>
+              </select>
+            </div>
+          </div>
+          <div class="dong_tour">
+            <span class="label">Tiện Nghi:</span>
+            <div class="input_group">
+              <select id="dongtour">
+                <option value="tatca">Tất Cả</option>
+                <option value="caocap">Cao Cấp</option>
+                <option value="tieuchuan">Tiêu Chuẩn</option>
+                <option value="tietkiem">Tiết Kiệm</option>
+              </select>
+            </div>
+          </div>
+          <div class="phuong_tien">
+            <span class="label">Đánh Giá:</span>
+            <div class="input_group">
+              <div>
+                <select id="phuongtien">
+                  <option value="tatca">Tất Cả</option>
+                  <option value="5sao">5 Sao</option>
+                  <option value="4sao">4 Sao</option>
+                  <option value="3sao">3 Sao</option>
+                  <option value="duoi3sao">Dưới 3 Sao</option>
+                </select>
+              </div>
+            </div>
+            <br />
+            <div class="ngay_sach">
+              <div id="divapdung">
+                <a onclick="m15()"
+                  ><button class="nut_xem_chi_tiet">Áp Dụng</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Danh sách khách sạn -->
+        <div class="help">
+          <div class="container">
+            <div id="ks1" class="card">
+              <div class="tour_anh">
+                <img src="./dao phu quoc.png" alt="Khách sạn" />
+              </div>
+              <div class="card-content">
+                <h3 class="tour_ten">Vinpearl Resort & Spa Nha Trang Bay</h3>
+                <div class="stars">★★★★☆</div>
+                <div class="tour_chi_tiet">
+                  Đảo Hòn Tre, Phường Vĩnh Nguyên, TP. Nha Trang, Khánh Hòa
+                </div>
+                <p class="tour_gia">450.000 VNĐ</p>
+                <p class="discount">Giảm giá: 0%</p>
+                <a
+                  onclick="m18('Vinpearl Resort & Spa Nha Trang Bay')"
+                  class="contact"
+                  >Đặt phòng</a
+                >
+                <a
+                  onclick="openMap('Đảo Hòn Tre, Phường Vĩnh Nguyên, TP. Nha Trang, Khánh Hòa')"
+                  class="contact"
+                  >Đến tận nơi?</a
+                >
+              </div>
+            </div>
+            <div id="ks2" class="card">
+              <div class="tour_anh">
+                <img src="./executive-suite-balcony-view.jpg" alt="Khách sạn" />
+              </div>
+              <div class="card-content">
+                <h3 class="tour_ten">Sheraton Nha Trang Hotel & Spa</h3>
+                <div class="stars">★★★★★</div>
+                <div class="tour_chi_tiet">
+                  26-28 Trần Phú, TP. Nha Trang, Khánh Hòa
+                </div>
+                <p class="tour_gia">550.000 VNĐ</p>
+                <p class="discount">Giảm giá: 0%</p>
+                <a
+                  onclick="m18('Sheraton Nha Trang Hotel & Spa')"
+                  class="contact"
+                  >Đặt phòng</a
+                >
+                <a
+                  onclick="openMap('26-28 Trần Phú, TP. Nha Trang, Khánh Hòa')"
+                  class="contact"
+                  >Đến tận nơi?</a
+                >
+              </div>
+            </div>
+            <div id="ks3" class="card">
+              <div class="tour_anh">
+                <img
+                  src="./intercontinental-nha-trang-4040412681-2x1.webp"
+                  alt="Khách sạn"
+                />
+              </div>
+              <div class="card-content">
+                <h3 class="tour_ten">InterContinental Nha Trang</h3>
+                <div class="stars">★★★☆☆</div>
+                <div class="tour_chi_tiet">
+                  32 - 34 Trần Phú, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa
+                </div>
+                <p class="tour_gia">400.000 VNĐ</p>
+                <p class="discount">Giảm giá: 10%</p>
+                <a onclick="m18('InterContinental Nha Trang')" class="contact"
+                  >Đặt phòng</a
+                >
+                <a
+                  onclick="openMap('32 - 34 Trần Phú, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa')"
+                  class="contact"
+                  >Đến tận nơi?</a
+                >
+              </div>
+            </div>
+            <div id="ks4" class="card">
+              <div class="tour_anh">
+                <img src="./vinpearl.png" alt="Khách sạn" />
+              </div>
+              <div class="card-content">
+                <h3 class="tour_ten">Vinpearl Resort Nha Trang</h3>
+                <div class="stars">★★★★★</div>
+                <div class="tour_chi_tiet">
+                  Đảo Hòn Tre, Nha Trang, Khánh Hòa
+                </div>
+                <p class="tour_gia">550.000 VNĐ</p>
+                <p class="discount">Giảm giá: 0%</p>
+                <a onclick="m18('Vinpearl Resort Nha Trang')" class="contact"
+                  >Đặt phòng</a
+                >
+                <a
+                  onclick="openMap('Đảo Hòn Tre, Nha Trang, Khánh Hòa')"
+                  class="contact"
+                  >Đến tận nơi?</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hope">
+          <div class="container">
+            <div id="ks5" class="card">
+              <div class="tour_anh">
+                <img
+                  src="./1mc5g12000h16w18c93C6_R_960_660_R5_D.webp"
+                  alt="Khách sạn"
+                />
+              </div>
+              <div class="card-content">
+                <h3 class="tour_ten">Sunrise Nha Trang Beach Hotel & Spa</h3>
+                <div class="stars">★★★★☆</div>
+                <div class="tour_chi_tiet">
+                  12 Trần Phú, TP. Nha Trang, Khánh Hòa
+                </div>
+                <p class="tour_gia">450.000 VNĐ</p>
+                <p class="discount">Giảm giá: 5%</p>
+                <a
+                  onclick="m18('Sunrise Nha Trang Beach Hotel & Spa')"
+                  class="contact"
+                  >Đặt phòng</a
+                >
+                <a
+                  onclick="openMap('12 Trần Phú, TP. Nha Trang, Khánh Hòa')"
+                  class="contact"
+                  >Đến tận nơi?</a
+                >
+              </div>
+            </div>
+            <div id="ks6" class="card">
+              <div class="tour_anh">
+                <img src="./charm hills.png" alt="Khách sạn" />
+              </div>
+              <div class="card-content">
+                <h3 class="tour_ten">Mường Thanh Grand Nha Trang Hotel</h3>
+                <div class="stars">★★★★☆</div>
+                <div class="tour_chi_tiet">
+                  Dương Hiến Quyền, Phường Vĩnh Hải, TP. Nha Trang
+                </div>
+                <p class="tour_gia">450.000 VNĐ</p>
+                <p class="discount">Giảm giá: 5%</p>
+                <a
+                  onclick="m18('Mường Thanh Grand Nha Trang Hotel')"
+                  class="contact"
+                  >Đặt phòng</a
+                >
+                <a
+                  onclick="openMap('Dương Hiến Quyền, Phường Vĩnh Hải, TP. Nha Trang')"
+                  class="contact"
+                  >Đến tận nơi?</a
+                >
+              </div>
+            </div>
+            <div id="ks7" class="card">
+              <div class="tour_anh">
+                <img src="./laika.jpg" alt="Khách sạn" />
+              </div>
+              <div class="card-content">
+                <h3 class="tour_ten">Green World Nha Trang</h3>
+                <div class="stars">★★★★☆</div>
+                <div class="tour_chi_tiet">
+                  44 Nguyễn Thị Minh Khai, Phường Lộc Thọ, TP. Nha Trang, Khánh
+                  Hòa
+                </div>
+                <p class="tour_gia">450.000 VNĐ</p>
+                <p class="discount">Giảm giá: 5%</p>
+                <a onclick="m18('Green World Nha Tran')" class="contact"
+                  >Đặt phòng</a
+                >
+                <a
+                  onclick="openMap('44 Nguyễn Thị Minh Khai, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa')"
+                  class="contact"
+                  >Đến tận nơi?</a
+                >
+              </div>
+            </div>
+            <div id="ks8" class="card">
+              <div class="tour_anh">
+                <img src="./the marron.png" alt="Khách sạn" />
+              </div>
+              <div class="card-content">
+                <h3 class="tour_ten">Liberty Central Nha Trang</h3>
+                <div class="stars">★★★☆☆</div>
+                <div class="tour_chi_tiet">
+                  9 Biệt Thự, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa
+                </div>
+                <p class="tour_gia">400.000 VNĐ</p>
+                <p class="discount">Giảm giá: 10%</p>
+                <a onclick="m18('Liberty Central Nha Trang')" class="contact"
+                  >Đặt phòng</a
+                >
+                <a
+                  onclick="openMap('9 Biệt Thự, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa')"
+                  class="contact"
+                  >Đến tận nơi?</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-section">
+              <h3>Khám phá Việt Nam</h3>
+              <div class="footer-section">
+                <p><a onclick="m18()">Hợp tác với PKTMtravel</a></p>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h3>Về PKTMtravel</h3>
+              <p>Chính sách</p>
+              <p>Điều khoản</p>
+              <p>Quy chế hoạt động</p>
+              <p>Giải thưởng 63Stravel</p>
+              <p>Đăng ký KD: 00224001987</p>
+              <p>Điện thoại: 0912476286</p>
+              <p>S01-L26 Biệt thự Solasta Mansion Đường Nội,</p>
+              <p>Quận Hà Đông, TP Hà Nội, Việt Nam</p>
+            </div>
+            <div class="footer-section">
+              <h3>Khác</h3>
+              <p>Trang chủ</p>
+              <p>Review du lịch</p>
+              <p>Blog du lịch</p>
+              <p>Bản đồ WC</p>
+              <p>Video</p>
+              <p>Ảnh</p>
+              <p>Cục thi ảnh</p>
+              <p>Điểm du lịch</p>
+            </div>
+            <div class="footer-section">
+              <h3>Về PKTMtravel</h3>
+              <p>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-google"></i>
+              </p>
+              <p>Tải ứng dụng PKTMtravel</p>
+              <a href="#"
+                ><img
+                  id="app"
+                  src="./Screenshot 2025-03-10 185516.png"
+                  alt="App"
+              /></a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>Công ty TNHH phát triển số hóa Hà Nội</p>
+            <p>
+              Copyright © 2025 - Bản Beta đang chạy. Chủ trách nhiệm: Nguyễn Kỳ
+              Kỳ
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="./main5.js"></script>
+    <script src="./main6.js"></script>
+  </body>
+</html>

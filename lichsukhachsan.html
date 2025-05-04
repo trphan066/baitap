@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Tour Nha Trang</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background-color: #f0f4f8;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+      .chua {
+        max-width: 900px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .ngay_sach {
+        margin-bottom: 20px;
+      }
+      .nhan {
+        font-weight: bold;
+        margin-bottom: 8px;
+        display: block;
+        color: #269191; /* Màu chủ đạo */
+        font-size: 18px;
+      }
+      h1#thongbao {
+        font-size: 28px;
+        text-align: center;
+        margin: 0 0 20px;
+        color: #269191; /* Màu chủ đạo */
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .the {
+        margin-bottom: 25px;
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #fafafa;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .the:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      }
+      .the img {
+        width: 35%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      .noidung-the {
+        padding: 10px;
+        flex: 1;
+      }
+      .noidung-the h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 0 10px;
+        color: #269191; /* Màu chủ đạo */
+      }
+      .stars {
+        color: #f1c40f;
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+      .noidung-the p {
+        font-size: 14px;
+        color: #666;
+        margin: 5px 0;
+      }
+      .discount {
+        color: #27ae60;
+        font-weight: bold;
+      }
+      .price {
+        font-size: 18px;
+        color: #e74c3c;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+      .lienhe {
+        background-color: #269191; /* Màu chủ đạo */
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+      .lienhe:hover {
+        background-color: #1f7575; /* Tông đậm hơn của #269191 khi hover */
+      }
+      .lienhe:active {
+        background-color: #195e5e; /* Tông tối hơn khi nhấn */
+      }
+      a[href="./bookks.html"] .lienhe {
+        background-color: #269191; /* Màu chủ đạo */
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      a[href="./bookks.html"] .lienhe:hover {
+        background-color: #1f7575; /* Tông đậm hơn khi hover */
+      }
+      h2 {
+        color: #269191;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chua">
+      <div class="ngay_sach">
+        <a href="./khachsan.html"><button class="lienhe">Back</button></a>
+        <p></p>
+        <h1 style="color: #269191" id="thongbao">Danh sách đặt phòng</h1>
+        <h2 id="h2tb">
+          Hiện quý khách chưa đặt phòng nào!
+          <a href="./khachsan.html">Đặt phòng ngay bây giờ!</a>
+        </h2>
+      </div>
+      <div id="ks1" class="the">
+        <img src="./dao phu quoc.png" alt="Hotel" />
+        <div class="noidung-the">
+          <h3>Vinpearl Resort & Spa Nha Trang Bay</h3>
+          <div class="stars">★★★★☆</div>
+          <p>Đảo Hòn Tre, Phường Vĩnh Nguyên, TP. Nha Trang, Khánh Hòa</p>
+          <p class="discount">Giảm giá: 0%</p>
+          <p class="price">450,000vnđ 1 giờ</p>
+          <a onclick="m22('ks1')" class="lienhe">Hủy phòng</a>
+        </div>
+      </div>
+      <div id="ks2" class="the">
+        <img src="./executive-suite-balcony-view.jpg" alt="Hotel" />
+        <div class="noidung-the">
+          <h3>Sheraton Nha Trang Hotel & Spa</h3>
+          <div class="stars">★★★★★</div>
+          <p>26-28 Trần Phú, TP. Nha Trang, Khánh Hòa</p>
+          <p class="discount">Giảm giá: 0%</p>
+          <p class="price">550,000VND 1 giờ</p>
+          <a onclick="m22('ks2')" class="lienhe">Hủy phòng</a>
+        </div>
+      </div>
+      <div id="ks3" class="the">
+        <img
+          src="./intercontinental-nha-trang-4040412681-2x1.webp"
+          alt="Hotel"
+        />
+        <div class="noidung-the">
+          <h3>InterContinental Nha Trang</h3>
+          <div class="stars">★★★☆☆</div>
+          <p>32 - 34 Trần Phú, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa</p>
+          <p class="discount">Giảm giá: 10%</p>
+          <p class="price">400,000VND 1 giờ</p>
+          <a onclick="m22('ks3')" class="lienhe">Hủy phòng</a>
+        </div>
+      </div>
+      <div id="ks4" class="the">
+        <img src="./vinpearl.png" alt="Hotel" />
+        <div class="noidung-the">
+          <h3>Vinpearl Resort Nha Trang</h3>
+          <div class="stars">★★★★★</div>
+          <p>Đảo Hòn Tre, Nha Trang, Khánh Hòa</p>
+          <p class="discount">Giảm giá: 0%</p>
+          <p class="price">550,000VND 1 giờ</p>
+          <a onclick="m22('ks4')" class="lienhe">Hủy phòng</a>
+        </div>
+      </div>
+      <div id="ks5" class="the">
+        <img src="./1mc5g12000h16w18c93C6_R_960_660_R5_D.webp" alt="Hotel" />
+        <div class="noidung-the">
+          <h3>Sunrise Nha Trang Beach Hotel & Spa</h3>
+          <div class="stars">★★★★☆</div>
+          <p>12 Trần Phú, TP. Nha Trang, Khánh Hòa</p>
+          <p class="discount">Giảm giá: 5%</p>
+          <p class="price">450,000VND 1 giờ</p>
+          <a onclick="m22('ks5')" class="lienhe">Hủy phòng</a>
+        </div>
+      </div>
+      <div id="ks6" class="the">
+        <img src="./charm hills.png" alt="Hotel" />
+        <div class="noidung-the">
+          <h3>Mường Thanh Grand Nha Trang Hotel</h3>
+          <div class="stars">★★★★☆</div>
+          <p>Dương Hiến Quyền, Phường Vĩnh Hải, TP. Nha Trang</p>
+          <p class="discount">Giảm giá: 5%</p>
+          <p class="price">450,000VND 1 giờ</p>
+          <a onclick="m22('ks6')" class="lienhe">Hủy phòng</a>
+        </div>
+      </div>
+      <div id="ks7" class="the">
+        <img src="./laika.jpg" alt="Hotel" />
+        <div class="noidung-the">
+          <h3>Green World Nha Trang</h3>
+          <div class="stars">★★★★☆</div>
+          <p>
+            44 Nguyễn Thị Minh Khai, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa
+          </p>
+          <p class="discount">Giảm giá: 5%</p>
+          <p class="price">450,000VND 1 giờ</p>
+          <a onclick="m22('ks7')" class="lienhe">Hủy phòng</a>
+        </div>
+      </div>
+      <div id="ks8" class="the">
+        <img src="./the marron.png" alt="Hotel" />
+        <div class="noidung-the">
+          <h3>Liberty Central Nha Trang</h3>
+          <div class="stars">★★★☆☆</div>
+          <p>9 Biệt Thự, Phường Lộc Thọ, TP. Nha Trang, Khánh Hòa</p>
+          <p class="discount">Giảm giá: 10%</p>
+          <p class="price">400,000VND 1 giờ</p>
+          <a onclick="m22('ks8')" class="lienhe">Hủy phòng</a>
+        </div>
+      </div>
+    </div>
+    <script src="./main8.js"></script>
+  </body>
+</html>
