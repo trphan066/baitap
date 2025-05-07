@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  #tdlogo{
+    width: 50px;
+  }
+  #logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+  }
+  body {
+    background-color: #f4f4f4;
+    line-height: 1.6;
+  }
+  #overlay{
+    position: relative
+    z-index: 1;
+
+  }
+  .introduction{
+    margin-top: 20px;
+    z-index: 2;
+  }
+  /* Thanh điều hướng */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  #tablenavbar td {
+    text-align: center;
+    width: 15vw;
+  }
+  .nav-item {
+    transition: transform 0.3s ease-in-out;
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-item:hover {
+    transform: scale(1.1);
+    font-size: x-large;
+    color: #269191
+    ;
+  }
+  
+  .home-link {
+    transition: font-size 0.3s ease, color 0.3s;
+  }
+  
+  .home-link:hover {
+    font-size: 1.2em;
+    color: #269191
+    ;
+  }
+  
+  .nav-item i {
+    margin-right: 5px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-signup,
+  .btn-login {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-signup {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .btn-signup:hover {
+    background-color: #bbb;
+  }
+  
+  .btn-login {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-login:hover {
+    background-color: #0056b3;
+  }
+  .noidung{
+    margin-top: 100px;
+  }
+  .noidung h2{
+    color: aqua;
+  }
+  /* Đảm bảo phần nội dung nằm giữa màn hình */
+.noidung {
+    display: flex;
+    flex-direction: column; /* Sắp xếp chữ và ảnh theo cột */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    text-align: center; /* Căn giữa chữ */
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px; /* Giới hạn chiều rộng nội dung */
+  }
+  
+  /* Đảm bảo ảnh không vượt quá kích thước màn hình */
+  .noidung img {
+    max-width: 100%; /* Ảnh co giãn theo kích thước màn hình */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    margin: 10px 0; /* Thêm khoảng cách giữa ảnh và chữ */
+  }
+  
+  /* Responsive cho màn hình nhỏ hơn (điện thoại) */
+  @media (max-width: 768px) {
+    .noidung {
+      padding: 10px; /* Giảm padding trên màn hình nhỏ */
+    }
+  
+    .noidung h1 {
+      font-size: 1.5rem; /* Giảm kích thước chữ tiêu đề */
+    }
+  
+    .noidung h2 {
+      font-size: 1.2rem; /* Giảm kích thước chữ phụ */
+    }
+  
+    .noidung p {
+      font-size: 1rem; /* Giảm kích thước chữ đoạn văn */
+    }
+  }
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p {
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .app-store-btn {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .app-store-btn img {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-section .fab {
+    margin: 0 5px;
+    font-size: 1.2em;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    font-size: 0.8em;
+  }

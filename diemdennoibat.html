@@ -5,5 +5,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <link rel="stylesheet" href="./css/diemdennoibat.css" />
+  <body>
+    
+      <!-- Thanh điều hướng (Navbar) -->
+      <nav class="navbar">
+        <div class="navbar-left">
+          <table id="tablenavbar">
+            <tr>
+              <td id="tdlogo">
+                <img
+                  id="logo"
+                  src="./z6574029015871_6eb51b2871c47b791da6b9c075185452.jpg"
+                  alt=""
+                />
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./index.html" class="nav-item home-link"
+                    ><i class="fas fa-home"></i> Trang chủ</a
+                  >
+                </div>
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./khachsan.html" class="nav-item home-link"><i class="fas fa-hotel"></i>Khách sạn</a>
+                </div>
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./nhahang.html" class="nav-item home-link"><i class="fas fa-utensils"></i>Nhà hàng</a>
+                </div>
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./vevuichoi.html" class="nav-item home-link"><i class="fas fa-gamepad"></i>Vé vui chơi</a>
+                </div>
+              </td>
+              <td>
+                <div class="divnav">
+                  <a href="./tourdulich.html" class="nav-item home-link"><i class="fas fa-plane-departure"></i>Tour du lịch</a>
+                </div>
+              </td>
+              <td>
+                <div class="divnav"><a href="#" class="nav-item home-link"><i class="fas fa-question"></i>Khác</a></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="logg" class="navbar-right">
+          <a href="./dangki.html"
+            ><button class="btn-signup">Đăng ký</button></a
+          >
+          <a href="./dangnhap.html"
+            ><button class="btn-login">Đăng nhập</button></a
+          >
+        </div>
+        <div id="dissplaysearch">
+          <button id="button-search" onclick="search()">
+            Tìm Kiếm Theo Địa Điểm
+          </button>
+        </div>
+      </nav>
+      <h1>20 Điểm Đến Nổi Bật Ở Nha Trang</h1>
+      <p>Khám phá những địa danh không thể bỏ qua tại thành phố biển xinh đẹp</p>
+    </header>
+    <div class="noidung">
+      <div class="card">
+        <img src="https://statics.vinpearl.com/vinwonders-nha-trang_1665580300.jpg" alt="VinWonders Nha Trang">
+        <div class="card-content">
+          <h2>VinWonders Nha Trang</h2>
+          <p>VinWonders là khu giải trí lớn nằm trên đảo Hòn Tre, nổi tiếng với cáp treo vượt biển dài nhất Việt Nam. Tại đây, du khách có thể trải nghiệm hàng loạt trò chơi cảm giác mạnh, thủy cung hiện đại và công viên nước hấp dẫn.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/04/thap-ba-ponagar-1.jpg" alt="Tháp Bà Ponagar">
+        <div class="card-content">
+          <h2>Tháp Bà Ponagar</h2>
+          <p>Tháp Bà Ponagar là một trong những di tích lịch sử lâu đời của người Chăm, được xây dựng từ thế kỷ VIII đến XI. Đây là nơi linh thiêng thu hút đông đảo khách hành hương và du lịch mỗi năm.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn.vuanem.com/blog/wp-content/uploads/2022/12/vien-hai-duong-hoc-nha-trang1-1-copy-0.jpg" alt="Viện Hải Dương Học">
+        <div class="card-content">
+          <h2>Viện Hải Dương Học</h2>
+          <p>Là trung tâm nghiên cứu biển hàng đầu Việt Nam, Viện Hải Dương Học lưu trữ hơn 20.000 mẫu sinh vật biển, trong đó có bộ xương cá voi khổng lồ thu hút nhiều khách tham quan.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://statics.vinpearl.com/hon-chong-promontory-7_1645157608.jpg" alt="Hòn Chồng">
+        <div class="card-content">
+          <h2>Hòn Chồng</h2>
+          <p>Khu danh thắng với những khối đá chồng chất độc đáo, gắn liền với nhiều truyền thuyết thú vị. Đây là điểm đến lý tưởng để ngắm hoàng hôn và chụp ảnh lưu niệm.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn.nhatrangbooking.com.vn/images/uploads/dao-binh-ba-top.jpg" alt="Đảo Bình Ba">
+        <div class="card-content">
+          <h2>Đảo Bình Ba</h2>
+          <p>Hòn đảo hoang sơ nổi tiếng với đặc sản tôm hùm, nước biển trong xanh và những bãi biển yên bình. Du khách có thể cắm trại, lặn biển và thưởng thức hải sản tươi sống.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://lendang.vn/uploads/locations/full/locations_1425140637_8637827f9210a90c7e98a7314feed048.jpg" alt="Nhà Thờ Núi">
+        <div class="card-content">
+          <h2>Nhà Thờ Núi</h2>
+          <p>Nhà thờ Chánh Tòa Kitô Vua, còn gọi là Nhà Thờ Núi, được xây dựng trên đồi nhỏ từ năm 1928 với lối kiến trúc Gothic đặc trưng, là điểm tham quan nổi bật giữa lòng thành phố.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://bomanhatrang.com/wp-content/uploads/2023/05/bai-dai-nha-trang-2.jpg" alt="Bãi Dài">
+        <div class="card-content">
+          <h2>Bãi Dài</h2>
+          <p>Bãi biển dài và cát trắng mịn trải dài hơn 10km, Bãi Dài là nơi lý tưởng để thư giãn, tắm biển và tham gia các hoạt động thể thao nước.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://crystalmoonhouse.vn/wp-content/uploads/2023/04/Cho-Dam-1.jpg" alt="Chợ Đầm">
+        <div class="card-content">
+          <h2>Chợ Đầm</h2>
+          <p>Là khu chợ trung tâm lớn nhất Nha Trang, nơi bạn có thể mua sắm đặc sản địa phương, đồ thủ công mỹ nghệ và khám phá văn hóa bản địa.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://1.bp.blogspot.com/-dSYtaCI4kjg/XtYOEjOqHtI/AAAAAAAEWJ0/VB5So5Z2Xfc_qnfH27SboxyVAfBvtrthACLcBGAsYHQ/s1600/images5362357_tam_bun_thap_ba_4.jpg" alt="Suối Khoáng Nóng Tháp Bà">
+        <div class="card-content">
+          <h2>Suối Khoáng Nóng Tháp Bà</h2>
+          <p>Điểm đến lý tưởng để thư giãn với tắm bùn khoáng, massage và xông hơi tự nhiên, mang lại nhiều lợi ích sức khỏe và làm đẹp.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://vietnamembassy-mongolia.org/wp-content/uploads/2020/04/Nh%C3%A0-b%C3%A8-Tr%C6%B0%E1%BB%9Dng-Sa.jpg" alt="Đảo Bình Hưng">
+        <div class="card-content">
+          <h2>Đảo Bình Hưng</h2>
+          <p>Hòn đảo nhỏ thuộc Cam Ranh, nổi tiếng với nước biển trong veo và bãi cát trắng mịn. Nơi đây chưa bị du lịch hóa nhiều nên vẫn giữ được nét đẹp nguyên sơ.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://viettourist.com/resources/images/MienTrung/daodiepson-phuyen/diepson6.jpg" alt="Đảo Điệp Sơn">
+        <div class="card-content">
+          <h2>Đảo Điệp Sơn</h2>
+          <p>Điệp Sơn nổi tiếng với con đường đi bộ giữa biển độc đáo, dài gần 700m nối liền các đảo nhỏ. Đây là địa điểm không thể bỏ qua cho những ai yêu thích khám phá thiên nhiên kỳ thú.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://tourdulich.org.vn/wp-content/uploads/2013/11/Thac-Yang-Bay-Nha-Trang.jpg" alt="Thác Yang Bay">
+        <div class="card-content">
+          <h2>Thác Yang Bay</h2>
+          <p>Nằm giữa rừng núi hoang sơ, thác Yang Bay mang đến không gian xanh mát, nước trong lành và nhiều hoạt động vui chơi ngoài trời như tắm thác, cắm trại và picnic.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://bigtravel.com.vn/wp-content/uploads/2022/12/vinh-ninh-van-nha-trang-o-dau.png" alt="Vịnh Ninh Vân">
+        <div class="card-content">
+          <h2>Vịnh Ninh Vân</h2>
+          <p>Vịnh Ninh Vân là thiên đường nghỉ dưỡng với những khu resort cao cấp, nước biển trong xanh và không gian yên tĩnh tuyệt đối, rất thích hợp cho tuần trăng mật và nghỉ dưỡng.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://disantrangan.vn/wp-content/uploads/2022/01/chua_long_son_03.jpg" alt="Chùa Long Sơn">
+        <div class="card-content">
+          <h2>Chùa Long Sơn</h2>
+          <p>Chùa Long Sơn là ngôi chùa nổi tiếng với tượng Phật trắng khổng lồ ngự trên đỉnh đồi. Đây là nơi linh thiêng và là điểm tham quan văn hóa tâm linh quan trọng tại Nha Trang.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://www.vietnambooking.com/wp-content/uploads/2022/10/tour-hon-tam-nha-trang-1.jpg" alt="Đảo Hòn Tằm">
+        <div class="card-content">
+          <h2>Đảo Hòn Tằm</h2>
+          <p>Hòn Tằm là điểm du lịch sinh thái nổi tiếng, thích hợp cho các hoạt động lặn ngắm san hô, chèo thuyền kayak và nghỉ dưỡng trong không gian yên bình giữa thiên nhiên biển cả.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="http://reviewvilla.vn/wp-content/uploads/2022/05/dao-khi-nha-trang-1.jpg" alt="Đảo Khỉ">
+        <div class="card-content">
+          <h2>Đảo Khỉ (Monkey Island)</h2>
+          <p>Đảo Khỉ là nơi sinh sống của hàng trăm con khỉ tự nhiên. Du khách có thể tham gia xem xiếc khỉ, cho khỉ ăn và tận hưởng không khí trong lành cùng bãi biển đẹp.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://static.vinwonders.com/2022/03/lang-chai-nha-trang-6-1.jpg" alt="Làng Chài Nha Trang">
+        <div class="card-content">
+          <h2>Làng Chài Nha Trang</h2>
+          <p>Làng chài là nơi bạn có thể khám phá cuộc sống của ngư dân địa phương, tham gia các hoạt động đánh bắt hải sản và thưởng thức hải sản tươi ngon ngay tại chỗ.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://static.vinwonders.com/2022/05/ba-ho-nha-trang-2.jpg" alt="Suối Ba Hồ">
+        <div class="card-content">
+          <h2>Suối Ba Hồ</h2>
+          <p>Suối Ba Hồ gồm ba hồ nước tự nhiên giữa rừng rậm, là điểm đến lý tưởng cho những ai yêu thích trekking, khám phá thiên nhiên và tắm suối mát lạnh.</p>
+        </div>
+      </div>
+      
+    
+    </div>
+    <script>if (sessionStorage.getItem("dangnhap") === "an") {
+      document.getElementById("logg").style.display = "none";
+    }</script>
+  </body>
 </html>
